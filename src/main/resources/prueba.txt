@@ -1,0 +1,1 @@
+{"nombre":"Juan","edad":25,"rut":"0-1","universidad":"UFRO","mascotas":[{"nombre":"Fidio","edad":5,"identificador":"0-4"}]}

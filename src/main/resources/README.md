@@ -1,0 +1,1 @@
+_Ejercicio con Jackson; probados caso de relación bidireccional, relación de una clase consigo misma. Falta: relación de herencia y clases abstractas._
