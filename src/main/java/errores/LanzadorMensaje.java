@@ -15,4 +15,12 @@ public class LanzadorMensaje {
     public static void lanzarEntradaNoValida() {
         System.err.println("Entrada no válida");
     }
+
+    public static void lanzarNoSeHaEncontradoLaMascota(){
+        System.err.println("No se ha encontrado la mascota");
+    }
+
+    public static void lanzarStringNulo(){
+        System.err.println("No se admite String vacíos");
+    }
 }

@@ -22,7 +22,7 @@ public class Persona {
     private final ArrayList<Persona> amigos = new ArrayList<>();
 
     @JsonManagedReference
-    private final ArrayList<Perro> mascotas;
+    private final ArrayList<Animal> mascotas;
 
     public Persona(String nombre, int edad, String rut) {
         this.nombre = nombre;
@@ -71,12 +71,34 @@ public class Persona {
         return universidad;
     }
 
-    public ArrayList<Perro> getMascotas() {
+    public ArrayList<Animal> getMascotas() {
         return mascotas;
     }
 
-    public void addMascotas(Perro mascota) {
+    public void addMascotas(Animal mascota) {
         mascotas.add(mascota);
+    }
+
+    private void borrarMascota(Animal mascota){
+        mascotas.remove(mascota);
+    }
+    public void manejoBorrarMascota(Animal mascota){
+        if(mascotas.contains(mascota)){
+            borrarMascota(mascota);
+        }else{
+            LanzadorMensaje.lanzarNoSeHaEncontradoLaMascota();
+        }
+    }
+
+    private void borrarAmigo(Persona amigo){
+        amigos.remove(amigo);
+    }
+    public void manejoBorrarAmigo(Persona amigo){
+        if(amigos.contains(amigo)){
+            borrarAmigo(amigo);
+        }else{
+            LanzadorMensaje.lanzarNoSeHaEncontradoLaMascota();
+        }
     }
 
     public static Persona accederaManejo(String opcion) {
@@ -105,7 +127,7 @@ public class Persona {
         }
     }
 
-    public String toStringAmigo() {
+    private String toStringAmigo() {
 
         StringBuilder builder = new StringBuilder();
 

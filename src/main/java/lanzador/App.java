@@ -1,12 +1,13 @@
 package lanzador;
 
+import modelo.Animal;
 import modelo.Persona;
 
 public class App {
 
     public static void main(String[] args) {
 
-        Persona juan = Persona.accederaManejo("leer");
-        System.out.println(juan.getAmigos().get(0).toString());
+        Persona vaquita = Persona.accederaManejo("leer");
+        System.out.println(vaquita.toString());
     }
 }
